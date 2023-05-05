@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    font-family: Ubuntu,sans-serif;
+}
+body{
+    background: black;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    margin-top: 30px;
+    height: 100px;
+ 
+}
+.headingTxt{
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+}
+.follow{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.follow img{
+    width: 30px;
+    margin-right: 10px;
+    pointer-events: none;
+}
+
+.follow p a{
+    color: rgb(204, 204, 204);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+.container{
+
+    width: 100%;
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame{
+    padding: 0 3rem;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 630px;
+
+    background: white;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+.frame .userimg{
+    margin-top: -70px;
+    border-radius:50%;
+    margin-bottom: 10px;
+    outline:1.4px solid rgb(191, 191, 191);
+    outline-offset: 0.2px;
+    border: 5px solid white;
+}
+.frame p{
+    margin-top: 5px;
+    color: rgb(157, 157, 157);
+    font-size: 19px;
+    font-weight: 500;
+}
+.frame h6{
+    margin-top: 5px;
+    letter-spacing: 0.8px;
+    font-size: 38px;
+    color: black;
+    font-weight: normal;
+    text-align: center;
+}
+.frame .buttons {
+    width: 100%;
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.dobicon{
+    width: 60px;
+    cursor: pointer;
+
+}
+.name,.mailId,.dateofbirth,.address,.call,.password{
+    transition: 0.2s ease-in-out;
+}
+.name:active,.mailId:active,.dateofbirth:active,.address:active,.call:active,.password:active{
+    scale: 1.3;
+}
+.name:hover,.mailId:hover,.dateofbirth:hover,.address:hover,.call:hover,.password:hover,.name:hover{
+    border-top: 4px solid #94D82DD4;
+    border-top-style:groove ;
+    border-radius: 6px;
+    padding-top: 3px;
+}
+.usericon{
+    width: 40px;
+    cursor: pointer;
+}
+
+
+.mailicon{
+    width:32px;
+    cursor: pointer;
+}
+.dobicon{
+    width: 38px;
+    cursor: pointer;
+}
+.addressicon{
+    width: 32px;
+    cursor: pointer;
+}
+.callicon{
+    width: 35px;
+    cursor: pointer;
+}
+.passwordicon{
+    width: 35px;
+    cursor: pointer;
+}
+
+/* button begins */
+
+.container button{
+
+    margin-top: 1.3rem;
+    border-radius:6px;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: 0.4s;   
+    background: linear-gradient();
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: 15px;
+    font-family: monospace;
+}
+.container button:hover{
+    scale: 1.09;
+}
+.container button {
+    background: rgb(255,151,0);
+    border: none;
+    z-index: 1;
+  }
+  .container button:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: #eaf818;
+    background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5)
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .container button:hover {
+    color: #818181;
+  }
+  .container button:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+  }
+  .container button:active {
+    top: 2px;
+ 
+  }
+  
+
+
+/* button ends */
+
+@media (max-width:645px){
+    .frame{
+        height: 290px;
+        width: calc(100% - 1rem);
+        padding: 0 0.3rem;
+    }
+    .frame .buttons{
+        margin-top: 7px;
+    }
+    .frame .mailId{
+        display: none;
+    }
+    .frame h6{
+        margin: 0;
+    }
+}
